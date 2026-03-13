@@ -1,0 +1,25 @@
+.image {
+    cursor: pointer;
+}
+
+.Countries {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+@media (max-width: 1024px) {
+
+
+    .Countries {
+        display: flex;
+        justify-content: center;
+    }
+.image {
+    cursor: pointer;
+    max-width: 374PX;
+}
+}

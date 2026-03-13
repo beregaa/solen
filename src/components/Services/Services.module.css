@@ -1,0 +1,18 @@
+.servies{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+
+}
+.highlight{
+    color: #037AD1;
+}
+.title{
+    font-size: 35px;
+}
+
+.paragraph{
+      color: #929491;
+}

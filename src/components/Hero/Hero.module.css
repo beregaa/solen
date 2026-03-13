@@ -1,0 +1,180 @@
+.hero {
+    display: flex;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.mark {
+    color: #037ad1;
+
+    background-color: rgb(255, 255, 255);
+
+}
+
+.heroTextArea {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.priceNumber {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.paragraph {
+
+    text-align: start;
+    color: #595a59;
+}
+
+.callButton {
+    display: flex;
+    gap: 10px;
+}
+
+.consultationButton {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #037ad1;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow {
+    width: 25px;
+    height: 25px;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.telePhone {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    font-weight: bold;
+
+    border: 1px solid #037ad1;
+    color: #037ad1;
+
+}
+
+.telephoneIcon {
+    width: 30px;
+    height: 30px;
+}
+
+
+.heroImage {
+    background-image: url('/radiator.webp');
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.buildingicon {
+    width: 80px;
+    height: 80px;
+}
+
+.adverstisment {
+    width: 80%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    opacity: 90%;
+
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-size: 50px;
+}
+
+
+.serviceProvides {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
+
+
+}
+
+.year {
+    color: #037ad1;
+    font-size: 30px;
+    margin: 0;
+    padding: 10px;
+}
+
+.time {
+    padding: 10px;
+    color: #F4968F;
+    font-size: 35px;
+    margin: 0;
+}
+
+.delivery {
+    margin: 0;
+    color: #A4CFC1;
+    font-size: 30px;
+    padding: 10px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        display: flex;
+        margin-top: 0px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .arrow {
+        display: none;
+    }
+
+    .callButton{
+        flex-direction: column;
+    }
+
+    .heroTextArea{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}

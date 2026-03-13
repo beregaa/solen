@@ -1,0 +1,23 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+
+    margin: 0 auto;
+
+}
+
+.content {
+    max-width: 1380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.galleryGrid{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

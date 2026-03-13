@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ant-menu-item:nth-last-child(2) {
+  height: 60px !important;
+  padding-right: 27px !important;
+}
+.ant-menu-item:last-child {
+  height: 60px !important;
+  padding-right: 37px !important;
+}
+

@@ -1,0 +1,24 @@
+.card {
+    max-width: 246px;
+    height: 344px;
+    background-color: rgba(213, 217, 219, 0.61);
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.images {
+    max-width: 230px;
+    height: 230px;
+    border-radius: 10px;
+}
+.price{
+    color: #CC2828;
+        font-size: 18px;
+}
+.free{
+    color: #67A262;
+    font-size: 18px;
+    font-weight: 700;
+
+}

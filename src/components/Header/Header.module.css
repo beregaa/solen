@@ -1,0 +1,112 @@
+.header {
+  display: flex;
+  height: 90px;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid #929491;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.headerContent {
+  max-width: 1380px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 250px;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navBarButtons {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: #929491;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: #037ad1;
+  transition: width 0.25s ease;
+}
+
+.link:hover {
+  color: #037ad1;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.active {
+  color: #037ad1;
+}
+
+.active::after {
+  width: 100%;
+}
+
+.consultationButton {
+  padding: 16px 22px;
+  border-radius: 10px;
+  background-color: #037ad1;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.consultationButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .MobileConsultationButton {
+    padding: 16px 16px;
+    border-radius: 20px;
+    border: 2px solid #037ad1 !important;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .call {
+    width: 20px;
+    height: 20px;
+  }
+}
