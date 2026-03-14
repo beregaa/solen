@@ -1,34 +1,29 @@
-import Hero from './components/Hero/Hero'
-import Services from './components/Services/Services'
-import Countries from './components/Countries/Countries'
-import QualityPresentation from './components/QualityPresentation/QualityPresentation'
-import InventoryPage from './pages/inventory/inventory'
-import GalleryPage from './pages/gallery/gallery'
-import Footer from './components/Footer/Footer'
-
+import { lazy, Suspense } from "react";
+import Main from "./pages/main/main";
+const InventoryPage = lazy(() => import("./pages/inventory/inventory"));
+const GalleryPage = lazy(() => import("./pages/gallery/gallery"));
 
 const routes = [
   {
-    path: '/',
-    element: (
-      <div className='wrapper'>
-        <Hero />
-        <Services />
-        <QualityPresentation />
-        <Countries />
-        <Footer/>
-
-      </div>
-    )
+    path: "/",
+    element: <Main />,
   },
   {
-    path: '/inventory/:country',
-    element: <InventoryPage />
-  } ,
+    path: "/inventory/:country",
+    element: (
+      <Suspense fallback={null}>
+        <InventoryPage />
+      </Suspense>
+    ),
+  },
   {
-    path: '/gallery',
-    element: <GalleryPage />
-  }
-]
+    path: "/gallery",
+    element: (
+      <Suspense fallback={null}>
+        <GalleryPage />
+      </Suspense>
+    ),
+  },
+];
 
-export default routes
+export default routes;

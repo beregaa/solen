@@ -1,4 +1,4 @@
-import { Carousel } from 'antd'
+import Carousel from 'antd/es/carousel'
 
 import styles from './BoilerCarousel.module.css'
 import italyInventory from '../../../data/inventoryData'

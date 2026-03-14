@@ -46,7 +46,14 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className={styles.heroImage}  >
+            <div className={styles.heroImage}>
+                <img
+                    src="/radiator.webp"
+                    alt="Central heating radiator"
+                    className={styles.heroImageImg}
+                    fetchPriority="high"
+                    loading="eager"
+                />
                 <div className={styles.adverstisment}>
                     <div className={styles.price}>
                         <span>მონტაჟი ფასი იწყება</span>

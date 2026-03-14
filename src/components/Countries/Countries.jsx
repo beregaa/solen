@@ -1,18 +1,17 @@
-import { useNavigate } from 'react-router-dom'
-import styles from './Countries.module.css'
+import { useNavigate } from "react-router-dom";
+import styles from "./Countries.module.css";
 
+const countries = [
+  { name: "turkey", src: "/turkey.png" },
+  { name: "italy", src: "/italy.png" },
+  { name: "china", src: "/china.png" },
+];
 const Countries = () => {
-  const navigate = useNavigate()
-
-  const countries = [
-    { name: 'turkey', src: '/turkey.png' },
-    { name: 'italy', src: '/italy.png' },
-    { name: 'china', src: '/china.png' }
-  ]
+  const navigate = useNavigate();
 
   const handleClick = (country) => {
-    navigate(`/inventory/${country}`)
-  }
+    navigate(`/inventory/${country}`);
+  };
 
   return (
     <section>
@@ -26,12 +25,12 @@ const Countries = () => {
             alt={c.name}
             className={styles.image}
             onClick={() => handleClick(c.name)}
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: "pointer" }}
           />
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Countries
+export default Countries;

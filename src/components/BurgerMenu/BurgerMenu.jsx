@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { Drawer, Menu } from "antd"
-import { MenuOutlined } from "@ant-design/icons"
+import Drawer from 'antd/es/drawer'
+import Menu from 'antd/es/menu'
+import MenuOutlined from '@ant-design/icons/es/icons/MenuOutlined'
 
 import styles from "./BurgerMenu.module.css"
 import CallButton from "../CallButton/CallButton"

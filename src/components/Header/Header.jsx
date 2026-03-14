@@ -1,8 +1,10 @@
+import { lazy, Suspense } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import styles from './Header.module.css'
 import CallButton from '../CallButton/CallButton'
-import BurgerMenu from '../BurgerMenu/BurgerMenu'
 import useResponsive from '../../Hooks/useResponsive'
+
+const BurgerMenu = lazy(() => import('../BurgerMenu/BurgerMenu'))
 
 const Header = () => {
 
@@ -17,13 +19,19 @@ const Header = () => {
                     <img className={styles.logo} src="/logo.png" alt="Solen Heating Systems Logo" />
                 </Link>
 
-                {(isMobile || isTablet) && <>  <CallButton
-                    number="+995599123456"
-                    className={styles.MobileConsultationButton}
-                >
-                    <img className={styles.call} src="/call.png" alt="" />
-
-                </CallButton> <BurgerMenu /> </>}
+                {(isMobile || isTablet) && (
+                  <>
+                    <CallButton
+                      number="+995599123456"
+                      className={styles.MobileConsultationButton}
+                    >
+                      <img className={styles.call} src="/call.png" alt="" />
+                    </CallButton>
+                    <Suspense fallback={null}>
+                      <BurgerMenu />
+                    </Suspense>
+                  </>
+                )}
 
                 {!isMobile && !isTablet && (
                     <nav className={styles.navBar}>
