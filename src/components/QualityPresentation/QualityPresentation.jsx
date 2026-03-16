@@ -42,7 +42,7 @@ const QualityPresentation = () => {
                         <button className={styles.order}>შეუკვეთე ახლა</button>
                         <CallButton
                             className={styles.call}
-                            number="+995599123456">
+                            number="568883279">
                             დარეკვა
 
                         </CallButton>
