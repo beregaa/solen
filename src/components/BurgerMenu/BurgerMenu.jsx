@@ -40,7 +40,7 @@ const BurgerMenu = () => {
       key: "call",
       label: (
         <CallButton
-          number="+995599123456"
+          number="568883279"
           className={styles.consultationButton}
         >
           <img className={styles.call} src="/call.png" alt="" />

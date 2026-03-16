@@ -20,8 +20,8 @@ const Hero = () => {
 
 
 
-                    <CallButton className={styles.telePhone} number="+995599123456">
-                        <img className={styles.telephoneIcon} src="/telephoneIcon.webp" alt="telephone Icon" /> 555 12 34 56
+                    <CallButton className={styles.telePhone} number="568883279">
+                        <img className={styles.telephoneIcon} src="/telephoneIcon.webp" alt="telephone Icon" /> 568 88 32 79
                     </CallButton>
                 </div>
                 <div className={styles.serviceProvides}>
