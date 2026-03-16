@@ -14,28 +14,28 @@ const servicesData = [
     priceColor: "#FF6D5E"
   },
   {
-    icon: "/clipboariconbgreomoveeed.png",
+    icon: "/clipboariconbgreomoveeed.webp",
     title: "ადგილზე კონსულტაცია",
     description: "დეტალური კონსულტაცია და პროდუქტის შერჩევა, ბინის სპეციფიქკის გათვალისწინებით",
     price: 30,
     priceColor: "#61B1A4"
   },
   {
-    icon: "/atviorka.png",
+    icon: "/atviorka.webp",
     title: "სრული მონტაჟი",
     description: "ქვაბის, რადიატორების და როლების სრული მონტაჟი გასაღებზე პრინციპით",
     price: "პაკეტი",
     priceColor: "#FCC72D"
   },
   {
-    icon: "/kluchi (1).png",
+    icon: "/kluchi.webp",
     title: "სერვისი და მოვლა",
     description: "არსებული სისტემის პროფილაქტიკა, რემონტი და ოპტიმიზაცია",
     price: "პაკეტი",
     priceColor: "#2296CF"
   },
   {
-    icon: "/truck2.png",
+    icon: "/truck2.webp",
     title: "უფასო მოწიდება",
     description: "ტექნიკისა და მსალების უფასო მიწოდება მთელი საქართველოს მასშტაბით",
     price: 0,

@@ -24,11 +24,9 @@ const Footer = ({ number, children, className }) => {
 
                 <div className={styles.footerCol}>
                     <h4>სწრაფი ბმულები</h4>
-                    <a>მთავარი</a>
-                    <a>ჩვენ შესახებ</a>
-                    <a>სერვისები</a>
-                    <a>პროდუქცია</a>
-                    <a>კონტაქტი</a>
+                    <a href="/">მთავარი</a>
+                    <a href="/inventory">პროდუქცია</a>
+                    <a href="/gallery">გალერეა</a>
                 </div>
 
                 <div className={styles.footerCol}>

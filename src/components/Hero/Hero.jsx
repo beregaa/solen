@@ -8,9 +8,12 @@ const Hero = () => {
 
         <section className={styles.hero}>
             <div className={styles.heroTextArea}>
-                <h1 className={styles.title}> <span>ცენტრალური გათბობა</span> <span className={styles.mark}> თქვენი სახლისთვის</span></h1>
+                <h1 className={styles.title}> <span>ცენტრალური გათბობის მონტაჟი </span> <span className={styles.mark}> თქვენი სახლისთვის</span></h1>
 
-                <p className={styles.paragraph}>უმაღლესი ხარისხის ტექნიკა ,სწრაფი მონტაჟი და ბიუჯეტური ფასები SOLEN - სითბო და სანდოობა თქვენს სახლში, პროფესიონალებისგან</p>
+                <p className={styles.paragraph}>
+                    პროფესიონალური ცენტრალური გათბობის მონტაჟი, რადიატორების დაყენება
+                    და ქვაბების ინსტალაცია.
+                </p>
 
                 <div className={styles.callButton}>
                     <div className={styles.consultationButton}> უფასო კონსულტაცია  <img className={styles.arrow} src="/arrow-right-direction-white-icon.webp" alt="" /></div>
@@ -18,7 +21,7 @@ const Hero = () => {
 
 
                     <CallButton className={styles.telePhone} number="+995599123456">
-                        <img className={styles.telephoneIcon} src="/telephoneIcon.png" alt="telephoneIcon" /> 555 12 34 56
+                        <img className={styles.telephoneIcon} src="/telephoneIcon.webp" alt="telephone Icon" /> 555 12 34 56
                     </CallButton>
                 </div>
                 <div className={styles.serviceProvides}>
@@ -59,7 +62,7 @@ const Hero = () => {
                         <span>მონტაჟი ფასი იწყება</span>
                         <span className={styles.priceNumber}>150-₾ </span>
                     </div>
-                    <img className={styles.buildingicon} src="/buildingicon.png" alt="" />
+                    <img className={styles.buildingicon} src="/buildingicon.webp" alt="ცენტრალური გათბობის მონტაჟი ბინაში" />
                 </div>
             </div>
 

@@ -3,28 +3,28 @@ const italyInventory = [
     id: 1,
     name: "ALTEAS XC ცენტრალური გათბობის ქვაბი",
     price: 3630,
-    image: "/ALTEASXC.jpg",
+    image: "/ALTEASXC.webp",
     country: "italy"
   },
   {
     id: 2,
     name: "GENUS XC ცენტრალური გათბობის ქვაბი",
     price: 3049,
-    image: "/GENUSXC.jpg",
+    image: "/GENUSXC.webp",
     country: "italy"
   },
   {
     id: 3,
     name: "CLAS XC ცენტრალური გათბობის ქვაბი",
     price: 2549,
-    image: "/classxc.jpg",
+    image: "/classxc.webp",
     country: "italy"
   },
   {
     id: 4,
     name: "CARES XC ცენტრალური გათბობის ქვაბი",
     price: 2249,
-    image: "/caresxc.jpg",
+    image: "/caresxc.webp",
     country: "italy"
   },
   {
@@ -45,7 +45,7 @@ const italyInventory = [
     id: 7,
     name: "გათბობის ქვაბი Alixia Ultra 24kw FF NG საკვამურით",
     price: 2630,
-    image: "/alixia.jpg",
+    image: "/alixia.webp",
     country: "italy"
   },
   {

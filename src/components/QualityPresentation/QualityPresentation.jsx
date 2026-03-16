@@ -21,19 +21,19 @@ const QualityPresentation = () => {
 
                     <div className={styles.widgetwrap}>
                         <QualityPresentationWidget
-                            icon="/sheald.png"
+                            icon="/sheald.webp"
                             title="5 წლიანი გარანტია"
                             description="სრული გარანტია მწარმოებლისგან"
                         />
 
                         <QualityPresentationWidget
-                            icon="/ectroo.png"
+                            icon="/ectroo.webp"
                             title="ენერგოეფექტურობა"
                             description="დაზოგეთ გათბობის ხარჯები"
                         />
 
                         <QualityPresentationWidget
-                            icon="/truck2.png"
+                            icon="/truck2.webp"
                             title="უფასო მიწოდება"
                             description="მთელი საქართველოს მასშტაბით"
                         />
