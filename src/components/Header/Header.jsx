@@ -36,13 +36,13 @@ const Header = () => {
                 {!isMobile && !isTablet && (
                     <nav className={styles.navBar}>
                         <ul className={styles.navBarButtons}>
-                            <li>
+                            {/* <li>
                                 <NavLink to="/services" className={({ isActive }) =>
                                     isActive ? `${styles.link} ${styles.active}` : styles.link
                                 }>
                                     სერვისები
                                 </NavLink>
-                            </li>
+                            </li> */}
 
                             <li>
                                 <NavLink to="/inventory/italy" className={({ isActive }) =>
@@ -52,13 +52,13 @@ const Header = () => {
                                 </NavLink>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <NavLink to="/gallery" className={({ isActive }) =>
                                     isActive ? `${styles.link} ${styles.active}` : styles.link
                                 }>
                                     გალერეა
                                 </NavLink>
-                            </li>
+                            </li> */}
                         </ul>
 
                         <CallButton

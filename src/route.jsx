@@ -16,14 +16,14 @@ const routes = [
       </Suspense>
     ),
   },
-  {
-    path: "/gallery",
-    element: (
-      <Suspense fallback={null}>
-        <GalleryPage />
-      </Suspense>
-    ),
-  },
+  // {
+  //   path: "/gallery",
+  //   element: (
+  //     <Suspense fallback={null}>
+  //       <GalleryPage />
+  //     </Suspense>
+  //   ),
+  // },
 ];
 
 export default routes;

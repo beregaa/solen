@@ -12,14 +12,14 @@ const BurgerMenu = () => {
   const navigate = useNavigate()
 
   const items = [
-    {
-      key: "services",
-      label: "სერვისები",
-      onClick: () => {
-        navigate("/services")
-        setOpen(false)
-      },
-    },
+    // {
+    //   key: "services",
+    //   label: "სერვისები",
+    //   onClick: () => {
+    //     navigate("/services")
+    //     setOpen(false)
+    //   },
+    // },
     {
       key: "inventory",
       label: "ინვენტარი",
@@ -28,14 +28,14 @@ const BurgerMenu = () => {
         setOpen(false)
       },
     },
-    {
-      key: "gallery",
-      label: "გალერეა",
-      onClick: () => {
-        navigate("/gallery")
-        setOpen(false)
-      },
-    },
+    // {
+    //   key: "gallery",
+    //   label: "გალერეა",
+    //   onClick: () => {
+    //     navigate("/gallery")
+    //     setOpen(false)
+    //   },
+    // },
     {
       key: "call",
       label: (
