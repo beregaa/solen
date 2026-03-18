@@ -34,7 +34,7 @@ const Footer = ({ number, children, className }) => {
                     <p>✔ გათბობის მონტაჟი</p>
                     <p>✔ დიაგნოსტიკა</p>
                     <p>✔ ქვაბის შეკეთება</p>
-                    <p>✔ რადიატორების მონტაჟი</p>
+                    <p>✔ რადიატორების მონტაჟი </p>
                 </div>
 
                 <div className={styles.footerCol}>
