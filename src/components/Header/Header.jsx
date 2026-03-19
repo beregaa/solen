@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { usePageContext } from 'vike-react/usePageContext'
+import { ClientOnly } from 'vike-react/ClientOnly'
 import styles from './Header.module.css'
 import CallButton from '../CallButton/CallButton'
 import useResponsive from '../../Hooks/useResponsive'
@@ -7,72 +8,64 @@ import useResponsive from '../../Hooks/useResponsive'
 const BurgerMenu = lazy(() => import('../BurgerMenu/BurgerMenu'))
 
 const Header = () => {
+  const { isMobile, isTablet } = useResponsive()
+  const { urlPathname } = usePageContext()
 
-    const { isMobile, isTablet } = useResponsive()
+  return (
+    <header className={styles.header}>
+      <div className={styles.headerContent}>
+        <a href="/">
+          <img className={styles.logo} src="/logo.png" alt="Solen Heating Systems Logo" />
+        </a>
 
-    return (
+        {(isMobile || isTablet) && (
+          <>
+            <CallButton
+              number="+995599123456"
+              className={styles.MobileConsultationButton}
+            >
+              <img className={styles.call} src="/call.png" alt="" />
+            </CallButton>
+            <ClientOnly fallback={null}>
+              <Suspense fallback={null}>
+                <BurgerMenu />
+              </Suspense>
+            </ClientOnly>
+          </>
+        )}
 
-        <header className={styles.header}>
-            <div className={styles.headerContent}>
+        {!isMobile && !isTablet && (
+          <nav className={styles.navBar}>
+            <ul className={styles.navBarButtons}>
+              <li>
+                <a
+                  href="/inventory/italy"
+                  className={urlPathname?.startsWith('/inventory') ? `${styles.link} ${styles.active}` : styles.link}
+                >
+                  ინვენტარი
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/gallery"
+                  className={urlPathname === '/gallery' ? `${styles.link} ${styles.active}` : styles.link}
+                >
+                  გალერეა
+                </a>
+              </li>
+            </ul>
 
-                <Link to="/">
-                    <img className={styles.logo} src="/logo.png" alt="Solen Heating Systems Logo" />
-                </Link>
-
-                {(isMobile || isTablet) && (
-                  <>
-                    <CallButton
-                      number="+995599123456"
-                      className={styles.MobileConsultationButton}
-                    >
-                      <img className={styles.call} src="/call.png" alt="" />
-                    </CallButton>
-                    <Suspense fallback={null}>
-                      <BurgerMenu />
-                    </Suspense>
-                  </>
-                )}
-
-                {!isMobile && !isTablet && (
-                    <nav className={styles.navBar}>
-                        <ul className={styles.navBarButtons}>
-                            {/* <li>
-                                <NavLink to="/services" className={({ isActive }) =>
-                                    isActive ? `${styles.link} ${styles.active}` : styles.link
-                                }>
-                                    სერვისები
-                                </NavLink>
-                            </li> */}
-
-                            <li>
-                                <NavLink to="/inventory/italy" className={({ isActive }) =>
-                                    isActive ? `${styles.link} ${styles.active}` : styles.link
-                                }>
-                                    ინვენტარი
-                                </NavLink>
-                            </li>
-
-                            {/* <li>
-                                <NavLink to="/gallery" className={({ isActive }) =>
-                                    isActive ? `${styles.link} ${styles.active}` : styles.link
-                                }>
-                                    გალერეა
-                                </NavLink>
-                            </li> */}
-                        </ul>
-
-                        <CallButton
-                            number="+995599123456"
-                            className={styles.consultationButton}
-                        >
-                            უფასო კონსულტაცია
-                        </CallButton>
-                    </nav>
-                )}
-
-            </div>
-        </header>
-    )
+            <CallButton
+              number="+995599123456"
+              className={styles.consultationButton}
+            >
+              უფასო კონსულტაცია
+            </CallButton>
+          </nav>
+        )}
+      </div>
+    </header>
+  )
 }
 
 export default Header

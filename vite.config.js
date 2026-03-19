@@ -1,15 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import vike from 'vike/plugin'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), vike()],
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'antd': ['antd/es/carousel', 'antd/es/drawer', 'antd/es/menu'],
-          'vendor': ['react', 'react-dom', 'react-router-dom'],
+        manualChunks(id) {
+          if (id.includes('antd/es')) return 'antd'
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) return 'vendor'
         },
       },
     },

@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react"
 
 const useResponsive = () => {
-  const [width, setWidth] = useState(window.innerWidth)
+  // Use same initial value on server and client to avoid hydration mismatch.
+  // Update to real width only after mount (client-side).
+  const [width, setWidth] = useState(1025)
 
   useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth)
-    }
-
+    const handleResize = () => setWidth(window.innerWidth)
+    const rafId = requestAnimationFrame(() => setWidth(window.innerWidth))
     window.addEventListener("resize", handleResize)
-
     return () => {
+      cancelAnimationFrame(rafId)
       window.removeEventListener("resize", handleResize)
     }
   }, [])

@@ -4,7 +4,7 @@ import styles from './Footer.module.css'
 
 
 
-const Footer = ({ number, children, className }) => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footerContainer}>
@@ -25,7 +25,7 @@ const Footer = ({ number, children, className }) => {
                 <div className={styles.footerCol}>
                     <h4>სწრაფი ბმულები</h4>
                     <a href="/">მთავარი</a>
-                    <a href="/inventory">პროდუქცია</a>
+                    <a href="/inventory/italy">პროდუქცია</a>
                     <a href="/gallery">გალერეა</a>
                 </div>
 

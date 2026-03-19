@@ -1,16 +1,17 @@
-import { useParams, useNavigate } from 'react-router-dom'
-import inventoryData from '../../data/inventoryData.js'
-import styles from './inventory.module.css'
-import InventoryCard from '../../components/InventoryCard/InventoryCard.jsx'
+import { usePageContext } from 'vike-react/usePageContext'
+import { navigate } from 'vike/client/router'
+import inventoryData from '../../../data/inventoryData.js'
+import styles from '../inventory.module.css'
+import InventoryCard from '../../../components/InventoryCard/InventoryCard.jsx'
 
-const InventoryPage = () => {
-  const { country } = useParams()
-  const navigate = useNavigate()
+export default function InventoryPage() {
+  const { routeParams } = usePageContext()
+  const country = routeParams?.country || 'italy'
 
   const countries = [
     { name: 'turkey', src: '/turkey.png' },
     { name: 'italy', src: '/italy.png' },
-    { name: 'china', src: '/china.png' }
+    { name: 'china', src: '/china.png' },
   ]
 
   const filteredProducts = inventoryData.filter(
@@ -19,11 +20,8 @@ const InventoryPage = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.title}>ცენტრალური
-        გათბობის ქვაბები</h1>
+      <h1 className={styles.title}>ცენტრალური გათბობის ქვაბები</h1>
       <div className={styles.content}>
-
-
         <div className={styles.flags}>
           {countries.map((c) => (
             <img
@@ -49,5 +47,3 @@ const InventoryPage = () => {
     </div>
   )
 }
-
-export default InventoryPage

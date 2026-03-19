@@ -1,17 +1,18 @@
-
+import { ClientOnly } from 'vike-react/ClientOnly'
 import CallButton from '../CallButton/CallButton'
 import BoilerCarousel from './BoilerCarousel/BoilerCarousel'
 import styles from './QualityPresentation.module.css'
 import QualityPresentationWidget from './QualityPresentationWidget/QualityPresentationWidget'
+
 const QualityPresentation = () => {
-
-    return (
-        <section className={styles.wrapper}>
-            <div className={styles.content}>
-
-                <div className={styles.imageWrapper}>
-                    <BoilerCarousel />
-                </div>
+  return (
+    <section className={styles.wrapper}>
+      <div className={styles.content}>
+        <div className={styles.imageWrapper}>
+          <ClientOnly fallback={<div style={{ minHeight: 300 }} />}>
+            <BoilerCarousel />
+          </ClientOnly>
+        </div>
 
                 <div className={styles.texts}>
                     <div>

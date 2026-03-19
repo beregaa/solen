@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { navigate } from "vike/client/router"
 import Drawer from 'antd/es/drawer'
 import Menu from 'antd/es/menu'
 import MenuOutlined from '@ant-design/icons/es/icons/MenuOutlined'
@@ -9,7 +9,6 @@ import CallButton from "../CallButton/CallButton"
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false)
-  const navigate = useNavigate()
 
   const items = [
     // {
@@ -24,18 +23,18 @@ const BurgerMenu = () => {
       key: "inventory",
       label: "ინვენტარი",
       onClick: () => {
-        navigate("/inventory/italy")
+        navigate('/inventory/italy')
         setOpen(false)
       },
     },
-    // {
-    //   key: "gallery",
-    //   label: "გალერეა",
-    //   onClick: () => {
-    //     navigate("/gallery")
-    //     setOpen(false)
-    //   },
-    // },
+    {
+      key: "gallery",
+      label: "გალერეა",
+      onClick: () => {
+        navigate("/gallery")
+        setOpen(false)
+      },
+    },
     {
       key: "call",
       label: (

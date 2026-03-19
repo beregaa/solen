@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { navigate } from "vike/client/router";
 import styles from "./Countries.module.css";
 
 const countries = [
@@ -7,8 +7,6 @@ const countries = [
   { name: "china", src: "/china.png", alt: "ჩინური რადიატორები" },
 ];
 const Countries = () => {
-  const navigate = useNavigate();
-
   const handleClick = (country) => {
     navigate(`/inventory/${country}`);
   };
