@@ -27,7 +27,7 @@ export default function InventoryPage() {
             <img
               key={c.name}
               src={c.src}
-              alt={c.name}
+              alt={`გათბობის ქვაბები ${c.name}`}
               onClick={() => navigate(`/inventory/${c.name}`)}
               className={
                 country === c.name
