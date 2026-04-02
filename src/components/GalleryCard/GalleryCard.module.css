@@ -96,6 +96,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .name {
@@ -116,6 +117,8 @@
   margin: 0;
   text-align: start;
   padding: 0;
+  list-style: none;
+  gap: 10px;
 }
 
 .project {
@@ -129,6 +132,39 @@
   padding: 20px;
 }
 
-.projectHighlight {
+.hard {
   color: #ff3b30;
+}
+
+.medium {
+  color: #ffd426;
+}
+
+.easy {
+  color: #34c759;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 305px;
+    /* min-width: 200px; */
+    background-color: #ff6b61;
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;
+
+  }
+
+  .headerWrapper {
+    background-color: #ff6b61;
+    padding: 18px;
+    border-radius: 0px 0px 10px 10px;
+  }
+
 }

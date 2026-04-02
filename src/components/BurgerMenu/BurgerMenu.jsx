@@ -42,7 +42,7 @@ const BurgerMenu = () => {
           number="568883279"
           className={styles.consultationButton}
         >
-          <img className={styles.call} src="/call.png" alt="" />
+          <img className={styles.call} src="/call.svg" alt="" />
           კონსულტაცია
         </CallButton>
       ),

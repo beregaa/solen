@@ -1,7 +1,12 @@
-export default function Head() {
+export function Head(pageContext) {
+  const { urlPathname } = pageContext
+  
+
+  const canonicalUrl = `https://solen.ge${urlPathname === '/' ? '/' : urlPathname}`
+
   return (
     <>
-      <link rel="canonical" href="https://solen.ge/" />
+      <link rel="canonical" href={canonicalUrl} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

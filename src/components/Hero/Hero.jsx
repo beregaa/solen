@@ -52,7 +52,7 @@ const Hero = () => {
             <div className={styles.heroImage}>
                 <img
                     src="/radiator.webp"
-                    alt="Central heating radiator"
+                    alt="ცენტრალური გათბობა გათბობის ქვაბის შეკეთება,ქვაბის მონტაჟი"
                     className={styles.heroImageImg}
                     fetchPriority="high"
                     loading="eager"

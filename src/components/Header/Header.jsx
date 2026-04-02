@@ -15,7 +15,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <a href="/">
-          <img className={styles.logo} src="/logo.png" alt="Solen Heating Systems Logo" />
+          <img className={styles.logo} src="/logo.webp" alt="Solen Heating Systems Logo" />
         </a>
 
         {(isMobile || isTablet) && (
@@ -24,7 +24,7 @@ const Header = () => {
               number="+995599123456"
               className={styles.MobileConsultationButton}
             >
-              <img className={styles.call} src="/call.png" alt="" />
+              <img className={styles.call} src="/call.svg" alt="" />
             </CallButton>
             <ClientOnly fallback={null}>
               <Suspense fallback={null}>

@@ -21,6 +21,19 @@ const GalleryCard = ({
     setCurrentImage((prev) => (prev - 1 + pictures.length) % pictures.length)
   }
 
+  const getProjectLevelClass = (level) => {
+    switch (level) {
+      case 'რთული':
+        return styles.hard
+      case 'საშუალო':
+        return styles.medium
+      case 'მარტივი':
+        return styles.easy
+      default:
+        return ''
+    }
+  }
+
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -30,36 +43,15 @@ const GalleryCard = ({
               src={pictures[currentImage]}
               alt={`Gallery ${currentImage + 1}`}
               className={styles.image}
+              loading="lazy"
               onClick={() => setIsOpen(true)}
             />
 
-            {isOpen && (
-              <div className={styles.modal} onClick={() => setIsOpen(false)}>
-
-                <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-
-                  <img
-                    src={pictures[currentImage]}
-                    className={styles.modalImage}
-                  />
-
-                  {pictures.length > 1 && (
-                    <div className={styles.modalNavigation}>
-                      <button onClick={prevImage}>{'<'}</button>
-                      <span>{currentImage + 1}/{pictures.length}</span>
-                      <button onClick={nextImage}>{'>'}</button>
-                    </div>
-                  )}
-
-                </div>
-
-              </div>
-            )}
             {pictures.length > 1 && (
               <div className={styles.navigation}>
-                <button onClick={prevImage} className={styles.navButton}>{'<'}</button>
-                <span>{`${currentImage + 1}/${pictures.length}`}</span>
-                <button onClick={nextImage} className={styles.navButton}>{'>'}</button>
+                <button onClick={prevImage}>‹</button>
+                <span>{currentImage + 1}/{pictures.length}</span>
+                <button onClick={nextImage}>›</button>
               </div>
             )}
           </>
@@ -67,11 +59,23 @@ const GalleryCard = ({
       </div>
 
       <div className={styles.content}>
+        
         <div className={styles.headerWrapper}>
           <div className={styles.header}>
-            {userAvatar && <img src={userAvatar} alt={userName} className={styles.avatar} />}
+            {userAvatar && (
+              <img
+                src={userAvatar}
+                alt={userName}
+                className={styles.avatar}
+                loading="lazy"
+              />
+            )}
+
             <span className={styles.name}>{userName}</span>
-            <span className={styles.rating}>{'⭐'.repeat(qualityStars)}</span>
+
+            <span className={styles.rating}>
+              {'⭐'.repeat(qualityStars)}
+            </span>
           </div>
 
           <p className={styles.comment}>{userComment}</p>
@@ -81,17 +85,46 @@ const GalleryCard = ({
           {taskSituation.length > 0 && (
             <ul className={styles.taskList}>
               {taskSituation.map((task, index) => (
-                <li key={index}>{task}</li>
+                <li key={index}>✅ {task}</li>
               ))}
             </ul>
           )}
 
           {projectLevel && (
             <p className={styles.project}>
-              პროექტის სირთულე: <span className={styles.projectHighlight}>{projectLevel}</span>
+              პროექტის სირთულე:{' '}
+              <span
+                className={`${styles.projectHighlight} ${getProjectLevelClass(projectLevel)}`}
+              >
+                {projectLevel}
+              </span>
             </p>
-          )}</div>
+          )}
+        </div>
       </div>
+
+      {isOpen && (
+        <div className={styles.modal} onClick={() => setIsOpen(false)}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={pictures[currentImage]}
+              className={styles.modalImage}
+              alt="Full view"
+            />
+
+            {pictures.length > 1 && (
+              <div className={styles.modalNavigation}>
+                <button onClick={prevImage}>‹</button>
+                <span>{currentImage + 1}/{pictures.length}</span>
+                <button onClick={nextImage}>›</button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

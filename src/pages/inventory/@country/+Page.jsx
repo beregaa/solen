@@ -3,6 +3,8 @@ import { navigate } from 'vike/client/router'
 import inventoryData from '../../../data/inventoryData.js'
 import styles from '../inventory.module.css'
 import InventoryCard from '../../../components/InventoryCard/InventoryCard.jsx'
+import { Row, Col } from 'antd'
+
 
 export default function InventoryPage() {
   const { routeParams } = usePageContext()
@@ -38,11 +40,20 @@ export default function InventoryPage() {
           ))}
         </div>
 
-        <div className={styles.products}>
+        <Row gutter={[30, 30]} justify="start">
           {filteredProducts.map((product) => (
-            <InventoryCard key={product.id} product={product} />
+            <Col
+              key={product.id}
+              xs={24}
+              sm={12}
+              md={8}
+              lg={6}
+              xl={6}
+            >
+              <InventoryCard product={product} />
+            </Col>
           ))}
-        </div>
+        </Row>
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ const Footer = () => {
             <div className={styles.footerContainer}>
 
                 <div className={styles.footerCol}>
-                    <img src="/logo.png" className={styles.logo} alt="logo" />
+                    <img src="/logo.webp" className={styles.logo} alt="logo" />
                     <p className={styles.desc}>
                         ცენტრალური გათბობის სისტემების მონტაჟი, დიაგნოსტიკა და შეკეთება.
                     </p>

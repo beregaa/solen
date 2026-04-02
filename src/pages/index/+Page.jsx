@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import Hero from '../../components/Hero/Hero'
 import Services from '../../components/Services/Services'
+import WhyUs from '../../components/WhyUs/WhyUs'
 
 const QualityPresentation = lazy(
   () => import('../../components/QualityPresentation/QualityPresentation')
@@ -15,8 +16,8 @@ export default function Page() {
       <Services />
       <Suspense fallback={null}>
         <QualityPresentation />
+        <WhyUs />
         <Countries />
-        <Footer />
       </Suspense>
     </div>
   )

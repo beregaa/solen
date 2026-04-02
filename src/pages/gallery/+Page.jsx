@@ -6,7 +6,7 @@ export default function GalleryPage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        <div>
+        <div className={styles.gallery}>
           <h1>გალერეა</h1>
 
           <div className={styles.galleryGrid}>

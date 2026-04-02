@@ -1,0 +1,71 @@
+.wrapper {
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    gap: 30px;
+
+}
+
+.text {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 5px;
+
+}
+
+.text p {
+    color: #595a59;
+    margin: 0;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.stats p {
+    margin: 0;
+}
+
+.stats h4 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.stats div {
+    padding: 15px;
+    background-color: #E8F6FA;
+    border-radius: 15px;
+    width: 300px;
+
+}
+
+.intro {
+    color: #595a59;
+}
+
+@media (max-width: 1024px) {}
