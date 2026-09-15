@@ -6,7 +6,7 @@ import ServicesCard from './ServicesCard/ServicesCard'
 const Services = () => {
 
     return (
-        <section>
+        <section className={styles.wrapper}>
             <h2 className={styles.title}>
                 ჩვენი <span className={styles.highlight}>სერვისები</span>
             </h2>

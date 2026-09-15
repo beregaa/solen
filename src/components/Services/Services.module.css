@@ -1,9 +1,12 @@
-.servies{
+.wrapper{
+    margin-top: var(--space-section);
+    padding-inline: var(--container-padding);
+}
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 5px;
+.servies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
 
 }
 .highlight{

@@ -1,18 +1,17 @@
 .wrapper {
     width: 100%;
-    margin-top: 50px;
+    margin-top: var(--space-section);
+    padding-inline: var(--container-padding);
 }
 
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
 }
 
 .card {
-    max-width: 600px;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -41,9 +40,9 @@
 }
 
 .stats {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
 
 }
 
@@ -60,7 +59,6 @@
     padding: 15px;
     background-color: #E8F6FA;
     border-radius: 15px;
-    width: 300px;
 
 }
 

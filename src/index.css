@@ -1,0 +1,14 @@
+:root {
+  --container-padding: clamp(20px, 4vw, 60px);
+  --space-section: clamp(56px, 7vw, 96px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}

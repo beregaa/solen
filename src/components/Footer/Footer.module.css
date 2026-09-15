@@ -1,7 +1,8 @@
 .footer {
   background: #050b0b;
   color: white;
-  padding: 60px 20px;
+  padding-block: 60px;
+  padding-inline: var(--container-padding);
   margin-top: 10px;
 }
 

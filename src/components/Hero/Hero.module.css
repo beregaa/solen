@@ -1,8 +1,10 @@
 .hero {
     display: flex;
-    margin-top: 80px;
+    margin-top: var(--space-section);
+    padding-inline: var(--container-padding);
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 
 }
 
@@ -17,6 +19,8 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    flex: 1 1 440px;
+    max-width: 560px;
 }
 
 .price {
@@ -84,8 +88,10 @@
 .heroImage {
     position: relative;
     border-radius: 30px;
-    width: 800px;
-    height: 600px;
+    flex: 1 1 480px;
+    max-width: 640px;
+    width: 100%;
+    aspect-ratio: 4 / 3;
     display: flex;
     justify-content: center;
     align-items: end;
@@ -130,14 +136,13 @@
 
 
 .serviceProvides {
-
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
     width: 100%;
     max-width: 600px;
-    justify-content: space-between;
-
-
+    column-gap: 16px;
+    margin-top: 8px;
 }
 
 .year {
