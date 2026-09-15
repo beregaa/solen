@@ -14,7 +14,7 @@ export function Head(pageContext) {
             '@context': 'https://schema.org',
             '@type': 'HVACBusiness',
             name: 'Solen',
-            telephone: '+995599123456',
+            telephone: '+995568883279',
             url: 'https://solen.ge',
             areaServed: 'Tbilisi',
             address: {

@@ -10,9 +10,9 @@ export default function GalleryPage() {
           <h1>გალერეა</h1>
 
           <div className={styles.galleryGrid}>
-            {GalleryData.map((gallery, index) => (
+            {GalleryData.map((gallery) => (
               <GalleryCard
-                key={index}
+                key={gallery.userName}
                 pictures={gallery.pictures}
                 userName={gallery.userName}
                 userAvatar={gallery.userAvatar}

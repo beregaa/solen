@@ -17,9 +17,9 @@ const Services = () => {
 
             <div className={styles.servies}>
 
-                {servicesData.map((service, index) => (
+                {servicesData.map((service) => (
                     <ServicesCard
-                        key={index}
+                        key={service.title}
                         icon={service.icon}
                         title={service.title}
                         description={service.description}

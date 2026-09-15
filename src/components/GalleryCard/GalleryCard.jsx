@@ -84,8 +84,8 @@ const GalleryCard = ({
         <div className={styles.secondePart}>
           {taskSituation.length > 0 && (
             <ul className={styles.taskList}>
-              {taskSituation.map((task, index) => (
-                <li key={index}>✅ {task}</li>
+              {taskSituation.map((task) => (
+                <li key={task}>✅ {task}</li>
               ))}
             </ul>
           )}

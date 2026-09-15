@@ -21,7 +21,7 @@ const Header = () => {
         {(isMobile || isTablet) && (
           <>
             <CallButton
-              number="+995599123456"
+              number="+995568883279"
               className={styles.MobileConsultationButton}
             >
               <img className={styles.call} src="/call.svg" alt="" />
@@ -56,7 +56,7 @@ const Header = () => {
             </ul>
 
             <CallButton
-              number="+995599123456"
+              number="+995568883279"
               className={styles.consultationButton}
             >
               უფასო კონსულტაცია
