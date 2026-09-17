@@ -1,101 +1,129 @@
 .hero {
-    display: flex;
-    margin-top: var(--space-section);
-    padding-inline: var(--container-padding);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-
-}
-
-.mark {
-    color: #037ad1;
-
-    background-color: rgb(255, 255, 255);
-
+    gap: clamp(32px, 5vw, 72px);
+    margin-top: clamp(32px, 5vw, 72px);
+    padding-inline: var(--container-padding);
+    text-align: start;
 }
 
 .heroTextArea {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    flex: 1 1 440px;
-    max-width: 560px;
+    align-items: flex-start;
+    min-width: 0;
 }
 
-.price {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
+.title {
+    margin: 0 0 20px;
+    font-size: var(--fs-h1);
+    font-weight: 700;
+    line-height: 1.15;
 }
 
-.priceNumber {
-    font-weight: bold;
-    font-size: 24px;
+.mark {
+    display: block;
+    color: var(--blue);
 }
 
 .paragraph {
-
-    text-align: start;
-    color: #595a59;
+    max-width: 46ch;
+    margin: 0 0 28px;
+    font-size: 18px;
+    color: var(--muted);
 }
 
-.callButton {
+.actions {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 36px;
 }
 
-.consultationButton {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #037ad1;
-    color: white;
-    border: none;
-    display: flex;
+.primaryButton,
+.phoneButton {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    min-height: 56px;
+    padding: 0 24px;
+    border-radius: var(--radius-s);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.primaryButton {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.primaryButton:hover {
+    background-color: var(--blue-dark);
+}
+
+.phoneButton {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+.phoneButton:hover {
+    background-color: var(--surface);
 }
 
 .arrow {
-    width: 25px;
-    height: 25px;
-    font-size: 17px;
-    font-weight: bold;
-
-}
-
-.telePhone {
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 17px;
-    font-weight: bold;
-
-    border: 1px solid #037ad1;
-    color: #037ad1;
-
+    width: 20px;
+    height: 20px;
 }
 
 .telephoneIcon {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
 }
 
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0;
+    padding: 24px 0 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
 
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.statValue {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--blue);
+    white-space: nowrap;
+}
+
+.statLabel {
+    font-size: var(--fs-small);
+    color: var(--muted);
+}
+
+/* image + price badge */
 .heroImage {
     position: relative;
-    border-radius: 30px;
-    flex: 1 1 480px;
-    max-width: 640px;
     width: 100%;
     aspect-ratio: 4 / 3;
-    display: flex;
-    justify-content: center;
-    align-items: end;
     overflow: hidden;
+    border-radius: var(--radius-l);
 }
 
 .heroImageImg {
@@ -104,90 +132,94 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
-.buildingicon {
-    width: 80px;
-    height: 80px;
-}
-
-.adverstisment {
-    position: relative;
-    z-index: 1;
-    width: 80%;
-    height: 60px;
-    background-color: white;
+.priceBadge {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    opacity: 90%;
+    gap: 12px;
+    max-width: 360px;
+    padding: 12px 14px 12px 18px;
+    background: rgba(255, 255, 255, 0.92);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: var(--radius-m);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.title {
+.priceText {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    font-size: 50px;
+    min-width: 0;
 }
 
-
-.serviceProvides {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
-    width: 100%;
-    max-width: 600px;
-    column-gap: 16px;
-    margin-top: 8px;
+.priceLabel {
+    font-size: 13px;
+    color: var(--muted);
 }
 
-.year {
-    color: #037ad1;
-    font-size: 30px;
-    margin: 0;
-    padding: 10px;
+.priceValue {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink);
 }
 
-.time {
-    padding: 10px;
-    color: #F4968F;
-    font-size: 35px;
-    margin: 0;
-}
-
-.delivery {
-    margin: 0;
-    color: #A4CFC1;
-    font-size: 30px;
-    padding: 10px;
+.priceIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: auto;
 }
 
 @media (max-width: 1024px) {
     .hero {
-        display: flex;
-        margin-top: 0px;
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 32px;
+        text-align: center;
+    }
+
+    .heroTextArea {
         align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
     }
 
-
-    .arrow {
-        display: none;
+    .paragraph {
+        font-size: 16px;
     }
 
-    .callButton{
+    .actions {
         flex-direction: column;
+        width: 100%;
+        max-width: 400px;
     }
 
-    .heroTextArea{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px;
+    .stats {
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .heroImage {
+        max-width: 640px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .priceBadge {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .priceValue {
+        font-size: 21px;
+    }
+
+    .priceIcon {
+        width: 40px;
     }
 }

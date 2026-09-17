@@ -1,35 +1,30 @@
-import { navigate } from "vike/client/router";
 import styles from "./Countries.module.css";
 
 const countries = [
-  { name: "turkey", src: "/turkey.png", alt: 'თურქეთის გათბობის სისტემები' },
-  { name: "italy", src: "/italy.png", alt: "იტალიური გათბობის ქვაბები" },
-  { name: "china", src: "/china.png", alt: "ჩინური რადიატორები" },
+  { name: "turkey", label: "თურქეთი", src: "/turkey.png" },
+  { name: "italy", label: "იტალია", src: "/italy.png" },
+  { name: "china", label: "ჩინეთი", src: "/china.png" },
 ];
-const Countries = () => {
-  const handleClick = (country) => {
-    navigate(`/inventory/${country}`);
-  };
 
+const Countries = () => {
   return (
     <section className={styles.wrapper}>
-      <h2>მწარმოებელი ქვეყნები</h2>
-      <p>ჩვენ ვმუშაობთ თურქული, იტალიური და ჩინური გათბობის სისტემების
-        მწარმოებლებთან, რაც გვაძლევს შესაძლებლობას შევთავაზოთ მომხმარებელს
-        საუკეთესო ხარისხისა და ფასის ბალანსი.</p>
+      <h2 className={styles.title}>მწარმოებელი ქვეყნები</h2>
+      <p className={styles.paragraph}>
+        ვმუშაობთ თურქული, იტალიური და ჩინური გათბობის სისტემების მწარმოებლებთან —
+        ასე გთავაზობთ ხარისხისა და ფასის საუკეთესო ბალანსს.
+      </p>
 
-      <div className={styles.Countries}>
+      <ul className={styles.countries}>
         {countries.map((c) => (
-          <img
-            key={c.name}
-            src={c.src}
-            alt={c.name}
-            className={styles.image}
-            onClick={() => handleClick(c.name)}
-            style={{ cursor: "pointer" }}
-          />
+          <li key={c.name}>
+            <a className={styles.country} href={`/inventory/${c.name}`}>
+              <img className={styles.flag} src={c.src} alt="" width="396" height="264" loading="lazy" />
+              <span className={styles.label}>{c.label}</span>
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

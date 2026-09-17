@@ -9,52 +9,39 @@ const QualityPresentation = () => {
     <section className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.imageWrapper}>
-          <ClientOnly fallback={<div style={{ minHeight: 300 }} />}>
+          <ClientOnly fallback={<div className={styles.carouselPlaceholder} />}>
             <BoilerCarousel />
           </ClientOnly>
         </div>
 
-                <div className={styles.texts}>
-                    <div>
-                        <h2 className={styles.title}>ცენტრალური გთბობა <span>+</span>   <span>  უფასო მონტაჟი</span></h2>
-                        <p className={styles.paragraph}>უმაღლესი ხარისხის გათბობის ქვაბი თურქეთიდან იდეალური საშუალო  ზომის ბინებისთვის, ენერგოეფექტური და გრძელვადიანი</p>
-                    </div>
+        <div className={styles.texts}>
+          <div>
+            <h2 className={styles.title}>
+              ცენტრალური გათბობა
+              <span className={styles.accent}>+ უფასო მონტაჟი</span>
+            </h2>
+            <p className={styles.paragraph}>
+              უმაღლესი ხარისხის გათბობის ქვაბი თურქეთიდან — იდეალური საშუალო ზომის ბინებისთვის,
+              ენერგოეფექტური და გრძელვადიანი.
+            </p>
+          </div>
 
-                    <div className={styles.widgetwrap}>
-                        <QualityPresentationWidget
-                            icon="/sheald.webp"
-                            title="5 წლიანი გარანტია"
-                            description="სრული გარანტია მწარმოებლისგან"
-                        />
+          <div className={styles.widgetwrap}>
+            <QualityPresentationWidget icon="/sheald.webp" title="5-წლიანი გარანტია" description="სრული გარანტია მწარმოებლისგან" />
+            <QualityPresentationWidget icon="/ectroo.webp" title="ენერგოეფექტურობა" description="დაზოგეთ გათბობის ხარჯები" />
+            <QualityPresentationWidget icon="/truck2.webp" title="უფასო მიწოდება" description="მთელი საქართველოს მასშტაბით" />
+          </div>
 
-                        <QualityPresentationWidget
-                            icon="/ectroo.webp"
-                            title="ენერგოეფექტურობა"
-                            description="დაზოგეთ გათბობის ხარჯები"
-                        />
-
-                        <QualityPresentationWidget
-                            icon="/truck2.webp"
-                            title="უფასო მიწოდება"
-                            description="მთელი საქართველოს მასშტაბით"
-                        />
-                    </div>
-                    <div className={styles.buttons}>
-                        <button className={styles.order}>შეუკვეთე ახლა</button>
-                        <CallButton
-                            className={styles.call}
-                            number="+995568883279">
-                            დარეკვა
-
-                        </CallButton>
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
-    )
+          <div className={styles.buttons}>
+            <a className={styles.order} href="/inventory/turkey">ქვაბების ნახვა</a>
+            <CallButton className={styles.call} number="+995568883279">
+              დარეკვა
+            </CallButton>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
-
 
 export default QualityPresentation

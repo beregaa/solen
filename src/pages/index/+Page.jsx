@@ -7,7 +7,6 @@ const QualityPresentation = lazy(
   () => import('../../components/QualityPresentation/QualityPresentation')
 )
 const Countries = lazy(() => import('../../components/Countries/Countries'))
-const Footer = lazy(() => import('../../components/Footer/Footer'))
 
 export default function Page() {
   return (

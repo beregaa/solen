@@ -1,53 +1,47 @@
-  .burger {
-    font-size: 26px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    max-width: 100px;
-    /* height: 100px; */
-  }
-
-  .consultationButton {
-    padding: 0px 6px;
-    border-radius: 20px;
-    border: 2px solid #037ad1 !important;
-    border: none;
-    font-weight: 500;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .call {
-    width: 20px;
-    height: 20px;
-  }
-
-  .socialIcon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-
-
-  }
-
-  .socialIcon a {
-
-    border-radius: 6px;
-    cursor: pointer;
-  }
- .facebook{
-
+.burger {
   display: flex;
   align-items: center;
- }
-  .facebookImage {
-    width: 30px;
-    height: 30px;
-  }
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 24px;
+  color: var(--ink);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.consultationButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 0 12px;
+  border: 2px solid var(--blue);
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.call {
+  width: 20px;
+  height: 20px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.facebook {
+  display: flex;
+  align-items: center;
+}
+
+.facebookImage {
+  width: 28px;
+  height: 28px;
+}

@@ -3,7 +3,7 @@
   padding: 20px;
   border-radius: 12px;
   color: white;
-  font-family: sans-serif;
+  text-align: start;
 
 }
 
@@ -56,6 +56,18 @@
   gap: 20px;
   margin-top: 10px;
   color: white;
+}
+
+.navigation button,
+.modalNavigation button {
+  min-width: 40px;
+  min-height: 40px;
+  font-size: 22px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .navigation {
@@ -155,19 +167,23 @@
 
 @media (max-width: 1024px) {
   .card {
-    display: flex;
     flex-direction: column;
-
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+    padding: 0;
   }
 
   .imageWrapper {
-    position: relative;
-    width: 305px;
-    /* min-width: 200px; */
-    background-color: #ff6b61;
-    padding: 15px;
-    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border-radius: 10px 10px 0 0;
+  }
 
+  .secondePart {
+    max-width: none;
+    padding: 20px 4px;
   }
 
   .headerWrapper {

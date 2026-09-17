@@ -13,6 +13,7 @@ const BoilerCarousel = () => {
               className={styles.image}
               src={product.image}
               alt={product.name}
+              loading="lazy"
             />
 
             <div className={styles.info}>

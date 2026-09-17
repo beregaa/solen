@@ -49,9 +49,9 @@ const GalleryCard = ({
 
             {pictures.length > 1 && (
               <div className={styles.navigation}>
-                <button onClick={prevImage}>‹</button>
+                <button onClick={prevImage} aria-label="წინა ფოტო">‹</button>
                 <span>{currentImage + 1}/{pictures.length}</span>
-                <button onClick={nextImage}>›</button>
+                <button onClick={nextImage} aria-label="შემდეგი ფოტო">›</button>
               </div>
             )}
           </>
@@ -117,9 +117,9 @@ const GalleryCard = ({
 
             {pictures.length > 1 && (
               <div className={styles.modalNavigation}>
-                <button onClick={prevImage}>‹</button>
+                <button onClick={prevImage} aria-label="წინა ფოტო">‹</button>
                 <span>{currentImage + 1}/{pictures.length}</span>
-                <button onClick={nextImage}>›</button>
+                <button onClick={nextImage} aria-label="შემდეგი ფოტო">›</button>
               </div>
             )}
           </div>

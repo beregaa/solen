@@ -30,11 +30,7 @@
 @media (max-width: 1024px) {
 
 
-    .wrapper {
-        width: auto;
-        display: flex;
-        padding: 0;
-        margin: 0 auto;
-
+    .galleryGrid {
+        width: 100%;
     }
 }

@@ -2,32 +2,18 @@ import servicesData from '../../data/ServiceData'
 import styles from './Services.module.css'
 import ServicesCard from './ServicesCard/ServicesCard'
 
-
 const Services = () => {
-
     return (
         <section className={styles.wrapper}>
-            <h2 className={styles.title}>
-                ჩვენი <span className={styles.highlight}>სერვისები</span>
-            </h2>
-
+            <h2 className={styles.title}>ჩვენი სერვისები</h2>
             <p className={styles.paragraph}>
-                ცენტრალური გათბობისა და მათი მონტაჟის სრული სპექტრის მომსახურება
+                ცენტრალური გათბობის სისტემების მონტაჟი და მომსახურება — ერთ ადგილას
             </p>
 
-            <div className={styles.servies}>
-
+            <div className={styles.services}>
                 {servicesData.map((service) => (
-                    <ServicesCard
-                        key={service.title}
-                        icon={service.icon}
-                        title={service.title}
-                        description={service.description}
-                        price={service.price}
-                        priceColor={service.priceColor}
-                    />
+                    <ServicesCard key={service.title} {...service} />
                 ))}
-
             </div>
         </section>
     )

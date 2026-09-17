@@ -1,24 +1,17 @@
 import styles from './ServicesCard.module.css'
 
-
-
-
-
-const ServicesCard = ({ icon, title, description, price, priceColor }) => {
+const ServicesCard = ({ icon, title, description, price }) => {
+    const priceText = typeof price === 'number' ? `${price} ₾` : price
 
     return (
-        <div className={styles.wrapper}>
-            <img className={styles.icon} src={icon} alt={title} />
-
-            <div className={styles.titleWrap}>
-                <h2 className={styles.titleWrap}>{title}</h2>
+        <article className={styles.card}>
+            <img className={styles.icon} src={icon} alt="" width="56" height="56" loading="lazy" />
+            <div className={styles.body}>
+                <h3 className={styles.title}>{title}</h3>
                 <p className={styles.description}>{description}</p>
+                <span className={styles.price}>{priceText}</span>
             </div>
-
-            <div>
-                <span className={styles.price} style={{ color: priceColor }}>{price} {typeof price == "number" ? '₾' : ''}</span>
-            </div>
-        </div>
+        </article>
     )
 }
 

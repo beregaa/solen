@@ -51,7 +51,7 @@ const BurgerMenu = () => {
       key: "fb",
       label: (
         <div className={styles.socialIcon}>
-          <a className={styles.facebook} target="_blank" href="https://www.facebook.com/profile.php?id=100085867923367">
+          <a className={styles.facebook} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100085867923367">
             <img className={styles.facebookImage} src="/facebook.png" alt="" />
           </a>
       <span>ფეისბუქი</span>
@@ -67,6 +67,7 @@ const BurgerMenu = () => {
       <button
         className={styles.burger}
         onClick={() => setOpen(true)}
+        aria-label="მენიუს გახსნა"
       >
         <MenuOutlined />
       </button>
