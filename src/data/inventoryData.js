@@ -1,131 +1,321 @@
-const italyInventory = [
+// Boilers shown on /inventory/<country> and on each product page
+// (/inventory/<country>/<slug>).
+//
+// Only `id, slug, name, price, image, country` are required.
+// Every other field is OPTIONAL — a section appears on the product page only
+// when you fill it in. Please use real data (manufacturer sheet / your experience).
+//
+//   power       — kW, number (e.g. 24)
+//   type        — e.g. 'ორკონტურიანი (გათბობა + ცხელი წყალი)'
+//   area        — recommended heated area, e.g. '120–200 მ²'
+//   hotWater    — e.g. '11.5 ლ/წთ'
+//   efficiency  — e.g. '93%'
+//   warranty    — e.g. '5 წელი'
+//   size        — e.g. '700 × 400 × 300 მმ'
+//   description — 1–3 sentences in plain words
+//   pros        — ['...', '...']  (3–4 items)
+//   cons        — ['...', '...']  (2–4 honest items)
+//   slug        — URL part: latin letters, numbers, dashes. Don't change it
+//                 after publishing (links and Google results use it).
+
+const inventoryData = [
   {
     id: 1,
-    name: "ALTEAS XC ცენტრალური გათბობის ქვაბი",
+    slug: 'alteas-xc',
+    name: 'ALTEAS XC ცენტრალური გათბობის ქვაბი',
     price: 3630,
-    image: "/ALTEASXC.webp",
-    country: "italy"
+    image: '/ALTEASXC.webp',
+    country: 'italy',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 2,
-    name: "GENUS XC ცენტრალური გათბობის ქვაბი",
+    slug: 'genus-xc',
+    name: 'GENUS XC ცენტრალური გათბობის ქვაბი',
     price: 3049,
-    image: "/GENUSXC.webp",
-    country: "italy"
+    image: '/GENUSXC.webp',
+    country: 'italy',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 3,
-    name: "CLAS XC ცენტრალური გათბობის ქვაბი",
+    slug: 'clas-xc',
+    name: 'CLAS XC ცენტრალური გათბობის ქვაბი',
     price: 2549,
-    image: "/classxc.webp",
-    country: "italy"
+    image: '/classxc.webp',
+    country: 'italy',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 4,
-    name: "CARES XC ცენტრალური გათბობის ქვაბი",
+    slug: 'cares-xc',
+    name: 'CARES XC ცენტრალური გათბობის ქვაბი',
     price: 2249,
-    image: "/caresxc.webp",
-    country: "italy"
+    image: '/caresxc.webp',
+    country: 'italy',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 5,
-    name: "კედლის ქვაბი ITALTHERM სისტემური ერთკონტურიანი",
+    slug: 'italtherm',
+    name: 'კედლის ქვაბი ITALTHERM სისტემური ერთკონტურიანი',
     price: 2335,
-    image: "/ITALTHERM.jpg",
-    country: "italy"
+    image: '/ITALTHERM.jpg',
+    country: 'italy',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 6,
-    name: "კედლის ქვაბი SMART",
+    slug: 'smart',
+    name: 'კედლის ქვაბი SMART',
     price: 2154,
-    image: "/SMART.jpg",
-    country: "italy"
+    image: '/SMART.jpg',
+    country: 'italy',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 7,
-    name: "გათბობის ქვაბი Alixia Ultra 24kw FF NG საკვამურით",
+    slug: 'alixia-ultra-24',
+    name: 'გათბობის ქვაბი Alixia Ultra 24kw FF NG საკვამურით',
     price: 2630,
-    image: "/alixia.webp",
-    country: "italy"
+    image: '/alixia.webp',
+    country: 'italy',
+    power: 24,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 8,
-    name: "NEPTO ცენტრალური გათბობის ქვაბი",
+    slug: 'nepto',
+    name: 'NEPTO ცენტრალური გათბობის ქვაბი',
     price: 1899,
-    image: "/neptoT.jpg",
-    country: "turkey"
+    image: '/neptoT.jpg',
+    country: 'turkey',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
-
   {
     id: 9,
-    name: "ATRON ცენტრალური გათბობის ქვაბი",
+    slug: 'atron',
+    name: 'ATRON ცენტრალური გათბობის ქვაბი',
     price: 2100,
-    image: "/atronT.png",
-    country: "turkey"
-
+    image: '/atronT.webp',
+    country: 'turkey',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 10,
-    name: "გათბობის ქვაბი GELIOS PLUS",
+    slug: 'gelios-plus',
+    name: 'გათბობის ქვაბი GELIOS PLUS',
     price: 2270,
-    image: "/geliosT.jpg",
-    country: "turkey"
-
+    image: '/geliosT.jpg',
+    country: 'turkey',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
   },
   {
     id: 11,
-    name: "გათბობის ქვაბი DOLCEVITA DX",
+    slug: 'dolcevita-dx',
+    name: 'გათბობის ქვაბი DOLCEVITA DX',
     price: 2180,
-    image: "/dloceT.jpg",
-    country: "turkey"
-
-  }, {
+    image: '/dloceT.jpg',
+    country: 'turkey',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
+  },
+  {
     id: 12,
-    name: "გათბობის ქვაბი L1PB18-C28WM",
+    slug: 'l1pb18-c28wm',
+    name: 'გათბობის ქვაბი L1PB18-C28WM',
     price: 1449,
-    image: "/number1C.jpg",
-    country: "china"
-
-  }
-  ,
-
+    image: '/number1C.jpg',
+    country: 'china',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
+  },
   {
     id: 13,
-    name: "ცენტრალური გათბობის ქვაბი L1PB24-C28WM",
+    slug: 'l1pb24-c28wm',
+    name: 'ცენტრალური გათბობის ქვაბი L1PB24-C28WM',
     price: 1599,
-    image: "/number2C.jpg ",
-    country: "china"
-
-  }
-  ,
+    image: '/number2C.jpg',
+    country: 'china',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
+  },
   {
     id: 14,
-    name: "ცენტრალური გათბობის ქვაბი L1PB28-C28WM",
+    slug: 'l1pb28-c28wm',
+    name: 'ცენტრალური გათბობის ქვაბი L1PB28-C28WM',
     price: 1669,
-    image: "/number3C.jpg",
-    country: "china"
-
-  }
-  , {
+    image: '/number3C.jpg',
+    country: 'china',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
+  },
+  {
     id: 15,
-    name: "ცენტრალური გათბობის ქვაბი L1PB32-C28WL",
+    slug: 'l1pb32-c28wl',
+    name: 'ცენტრალური გათბობის ქვაბი L1PB32-C28WL',
     price: 1999,
-    image: "/number4C.png",
-    country: "china"
-
-  }
-  , {
+    image: '/number4C.webp',
+    country: 'china',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
+  },
+  {
     id: 16,
-    name: "ცენტრალური გათბობის ქვაბი L1PB36-C28WL",
+    slug: 'l1pb36-c28wl',
+    name: 'ცენტრალური გათბობის ქვაბი L1PB36-C28WL',
     price: 2149,
-    image: "/number5C.png",
-    country: "china"
-
-  }
-
-
-
-
+    image: '/number5C.webp',
+    country: 'china',
+    power: null,
+    type: null,
+    area: null,
+    hotWater: null,
+    efficiency: null,
+    warranty: null,
+    size: null,
+    description: '',
+    pros: [],
+    cons: [],
+  },
 ]
 
-export default italyInventory
+export const countryNames = {
+  italy: 'იტალია',
+  turkey: 'თურქეთი',
+  china: 'ჩინეთი',
+}
+
+export const getProduct = (country, slug) =>
+  inventoryData.find((p) => p.country === country && p.slug === slug)
+
+export default inventoryData

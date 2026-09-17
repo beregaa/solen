@@ -1,4 +1,5 @@
 import { usePageContext } from 'vike-react/usePageContext'
+import reviewsData from '../data/reviewsData'
 
 export function Head() {
   const { urlPathname = '/' } = usePageContext()
@@ -35,6 +36,17 @@ export function Head() {
               addressLocality: 'Tbilisi',
               addressCountry: 'GE',
             },
+            // Real Facebook reviews from src/data/reviewsData.js (added only when there are some)
+            ...(reviewsData.length > 0 && {
+              review: reviewsData.map((r) => ({
+                '@type': 'Review',
+                author: { '@type': 'Person', name: r.name },
+                datePublished: r.date,
+                reviewBody: r.text,
+                publisher: { '@type': 'Organization', name: 'Facebook' },
+                ...(r.url && { url: r.url }),
+              })),
+            }),
           }),
         }}
       />

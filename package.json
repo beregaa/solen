@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vike dev",
+    "prebuild": "node scripts/sitemap.mjs",
     "build": "vike build",
     "lint": "eslint .",
-    "preview": "vike preview"
+    "preview": "vike preview",
+    "sitemap": "node scripts/sitemap.mjs"
   },
   "dependencies": {
     "antd": "^6.3.1",

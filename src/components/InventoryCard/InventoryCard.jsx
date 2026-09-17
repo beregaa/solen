@@ -2,7 +2,7 @@ import styles from './InventoryCard.module.css'
 
 const InventoryCard = ({ product }) => {
   return (
-    <article className={styles.card}>
+    <a className={styles.card} href={`/inventory/${product.country}/${product.slug}`}>
       <div className={styles.imageWrapper}>
         {product.image ? (
           <img className={styles.image} src={product.image} alt={product.name} loading="lazy" />
@@ -12,11 +12,11 @@ const InventoryCard = ({ product }) => {
       </div>
 
       <div className={styles.info}>
-        <h2 className={styles.title}>{product.name}</h2>
+        <h3 className={styles.title}>{product.name}</h3>
         <p className={styles.price}>{product.price} ₾</p>
         <span className={styles.free}>+ უფასო მონტაჟი</span>
       </div>
-    </article>
+    </a>
   )
 }
 

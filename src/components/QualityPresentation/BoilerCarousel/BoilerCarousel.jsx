@@ -1,14 +1,14 @@
 import Carousel from 'antd/es/carousel'
 
 import styles from './BoilerCarousel.module.css'
-import italyInventory from '../../../data/inventoryData'
+import inventoryData from '../../../data/inventoryData'
 
 const BoilerCarousel = () => {
   return (
     <Carousel  arrows infinite autoplay autoplaySpeed={2500} pauseOnHover>
-      {italyInventory.map((product) => (
+      {inventoryData.map((product) => (
         <div key={product.id}>
-          <div className={styles.slide}>
+          <a className={styles.slide} href={`/inventory/${product.country}/${product.slug}`}>
             <img
               className={styles.image}
               src={product.image}
@@ -20,7 +20,7 @@ const BoilerCarousel = () => {
               <h3 className={styles.title}>{product.name}</h3>
               <p className={styles.price}>{product.price} ₾</p>
             </div>
-          </div>
+          </a>
         </div>
       ))}
     </Carousel>

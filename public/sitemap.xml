@@ -2,22 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://solen.ge/</loc>
+    <lastmod>2026-09-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://solen.ge/gallery</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://solen.ge/inventory/italy</loc>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solen.ge/inventory/turkey</loc>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://solen.ge/inventory/china</loc>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/italy/alteas-xc</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/italy/genus-xc</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/italy/clas-xc</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/italy/cares-xc</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/italy/italtherm</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/italy/smart</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/italy/alixia-ultra-24</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/turkey/nepto</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/turkey/atron</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/turkey/gelios-plus</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/turkey/dolcevita-dx</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/china/l1pb18-c28wm</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/china/l1pb24-c28wm</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/china/l1pb28-c28wm</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/china/l1pb32-c28wl</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solen.ge/inventory/china/l1pb36-c28wl</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
